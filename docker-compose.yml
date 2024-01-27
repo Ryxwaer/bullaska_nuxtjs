@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  kennel_nuxt:
+    container_name: kennel_nuxt
+    build:
+      context: .
+    ports:
+      - '3000:3000'
