@@ -14,4 +14,7 @@ export default defineNuxtConfig({
   css: [
     '@/assets/css/globals.css'
   ],
+  routeRules: {
+    '/': { prerender: true },
+  },
 })
