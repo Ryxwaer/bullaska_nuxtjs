@@ -35,11 +35,11 @@
         <!-- mobile menu -->
       <div class="mobile-menu" v-show="showMenu">
         <div class="flex flex-col items-center">
-          <nuxt-link to="/" class="py-2 px-4">About</nuxt-link>
-          <nuxt-link to="/contact" class="py-2 px-4">Contact</nuxt-link>
-          <nuxt-link to="/blog" class="py-2 px-4">Blog</nuxt-link>
+          <nuxt-link to="/" class="py-2 px-4 mobile">About</nuxt-link>
+          <nuxt-link to="/contact" class="py-2 px-4 mobile">Contact</nuxt-link>
+          <nuxt-link to="/blog" class="py-2 px-4 mobile">Blog</nuxt-link>
           <a href="https://www.facebook.com/adriana.mikusova.37" target="_blank" rel="noopener noreferrer" class="block py-2 px-4">Facebook</a>
-          <button class="mobile-menu-button" @click="toggleMenu">
+          <button class="mobile-menu-button py-2 px-4" @click="toggleMenu">
             <Icon name="material-symbols:close" size="32" />
           </button>
         </div>
@@ -70,12 +70,15 @@ export default {
 .router-link-active::after {
   content: '';
   position: absolute;
-  bottom: 20px; /* Lower the line without affecting the text position */
+  bottom: 20px;
   left: 0;
   width: 100%;
-  height: 1px; /* Adjust thickness of the underline */
-  background-color: black; /* Adjust color of the underline */
-  transform: translateY(100%); /* Shift the line down */
+  height: 1px;
+  background-color: black;
+  transform: translateY(100%);
+}
+.mobile.router-link-active::after {
+  bottom: 8px;
 }
 .no-underline.router-link-active::after {
   display: none;
