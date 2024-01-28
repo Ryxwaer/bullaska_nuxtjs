@@ -1,6 +1,6 @@
 <template>
     <nav class="bg-brown text-2xl">
-        <div class="max-w mx-auto px-4">
+      <div class="max-w mx-auto fluid-padding-x fluid-padding-y">
             <div class="flex justify-between">
                 <div class="flex space-x-4">
                     <!-- logo -->
@@ -12,7 +12,7 @@
                 </div>
 
                 <!-- primary nav -->
-                <div class="hidden sm:flex items-center space-x-3">
+                <div class="hidden sm:flex items-center space-x-3 font-work-sans-thin">
                     <nuxt-link to="/" class="py-5 px-3">About</nuxt-link>
                     <nuxt-link to="/contact" class="py-5 px-3">Contact</nuxt-link>
                     <nuxt-link to="/blog" class="py-5 px-3">Blog</nuxt-link>
@@ -82,5 +82,13 @@ export default {
 }
 .no-underline.router-link-active::after {
   display: none;
+}
+.fluid-padding-x {
+  padding-left: clamp(1rem, 5vw - 1rem, 24rem);
+  padding-right: clamp(1rem, 5vw - 1rem, 24rem);
+}
+.fluid-padding-y {
+  padding-top: clamp(0rem, 2.5vw - 1rem, 6rem);
+  padding-bottom: clamp(0rem, 2.5vw - 1rem, 6rem);
 }
 </style>

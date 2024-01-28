@@ -10,6 +10,7 @@ module.exports = {
       },
       fontWeight: {
         'work-sans-bold': '700',
+        'work-sans-thin': '400',
       },
     },
   },
