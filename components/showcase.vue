@@ -23,10 +23,7 @@ const showDescription = ref(true);
     <div class="grid items-center lg:grid-cols-2">
       <div>
         <Swiper
-            class="swiper-cards"
-            :style="{ width: width + 'px', height: width + 'px' }"
-            :width=width
-            :height=width
+            class="swiper-cards w-72 h-72 lg:w-80 lg:h-80"
             :modules="[SwiperAutoplay, SwiperEffectCards]"
             :slides-per-view="1"
             :loop="true"
@@ -65,7 +62,7 @@ const showDescription = ref(true);
   background-position: center;
 }
 .swiper-wrapper {
-  min-width: 100vh;
+  min-width: 80vh;
   width: 100vh;
 }
 .swiper-cards .swiper-slide {
