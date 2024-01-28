@@ -3,7 +3,7 @@
   <div class="container my-24 mx-auto">
     <!-- Section: Design Block -->
     <section class="mb-32 text-center">
-      <div class="py-12 md:px-12">
+      <div>
         <div class="container mx-auto">
           <div class="grid items-center lg:grid-cols-2">
             <div class="mb-12 md:mt-12 lg:mt-0 lg:mb-0">
