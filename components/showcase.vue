@@ -16,42 +16,44 @@ const showDescription = ref(true);
 </script>
 
 <template>
-  <br />
-  <p class="font-satisfy text-2xl">Our dogs:</p>
-  <br />
-  <div class="container mx-auto">
-    <div class="grid items-center lg:grid-cols-2">
-      <div>
-        <Swiper
-            class="swiper-cards w-72 h-72 lg:w-80 lg:h-80"
-            :modules="[SwiperAutoplay, SwiperEffectCards]"
-            :slides-per-view="1"
-            :loop="true"
-            :effect="'cards'"
-            :autoplay="{
-              delay: 5000,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: true,
-            }"
-            @sliderMove="event => (showDescription = false)"
-            @transitionStart="event => (showDescription = false)"
-            @transitionEnd="event => (activeSlide = event.realIndex, showDescription = true)"
-        >
-          <SwiperSlide v-for="(slide, idx) in slides" :key="idx">
-            <nuxt-img
-                :src="slide.path"
-                :alt="`Slide ${idx + 1}`"
-                :width=width
-                :height=width />
-          </SwiperSlide>
+  <div>
+    <br />
+    <p class="font-satisfy text-2xl">Our dogs:</p>
+    <br />
+    <div class="container mx-auto">
+      <div class="grid items-center lg:grid-cols-2">
+        <div>
+          <Swiper
+              class="swiper-cards w-72 h-72 lg:w-80 lg:h-80"
+              :modules="[SwiperAutoplay, SwiperEffectCards]"
+              :slides-per-view="1"
+              :loop="true"
+              :effect="'cards'"
+              :autoplay="{
+                delay: 5000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+              }"
+              @sliderMove="event => (showDescription = false)"
+              @transitionStart="event => (showDescription = false)"
+              @transitionEnd="event => (activeSlide = event.realIndex, showDescription = true)"
+          >
+            <SwiperSlide v-for="(slide, idx) in slides" :key="idx">
+              <nuxt-img
+                  :src="slide.path"
+                  :alt="`Slide ${idx + 1}`"
+                  :width=width
+                  :height=width />
+            </SwiperSlide>
 
-        </Swiper>
-      </div>
-      <transition name="fade">
-        <div :class="{ 'opacity-0': !showDescription }" class="transition-opacity duration-500 ease-in-out">
-          <p>{{ slides[activeSlide].description }}</p>
+          </Swiper>
         </div>
-      </transition>
+        <transition name="fade">
+          <div :class="{ 'opacity-0': !showDescription }" class="transition-opacity duration-500 ease-in-out">
+            <p>{{ slides[activeSlide].description }}</p>
+          </div>
+        </transition>
+      </div>
     </div>
   </div>
 </template>
@@ -60,10 +62,6 @@ const showDescription = ref(true);
 .swiper-slide {
   background-size: cover;
   background-position: center;
-}
-.swiper-wrapper {
-  min-width: 80vh;
-  width: 100vh;
 }
 .swiper-cards .swiper-slide {
   border-radius: 6px;
