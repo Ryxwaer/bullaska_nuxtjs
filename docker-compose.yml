@@ -1,9 +1,9 @@
 version: '3.8'
 
 services:
-  kennel_nuxt:
-    container_name: kennel_nuxt
+  bullaska:
+    container_name: bullaska
     build:
       context: .
-    ports:
-      - '3000:3000'
+    networks:
+        - nginx-proxy-manager_default
