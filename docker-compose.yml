@@ -6,4 +6,8 @@ services:
     build:
       context: .
     networks:
-        - nginx-proxy-manager_default
+      - nginx-proxy-manager_default
+
+networks:
+  nginx-proxy-manager_default:
+    external: true
