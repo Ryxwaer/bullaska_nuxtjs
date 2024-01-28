@@ -4,6 +4,7 @@
     "@nuxtjs/google-fonts": "latest",
     "@nuxtjs/tailwindcss": "latest",
     "nuxt": "^3.9.3",
+    "nuxt-swiper": "latest",
     "vue": "^3.4.14",
     "vue-router": "^4.2.5"
   },
