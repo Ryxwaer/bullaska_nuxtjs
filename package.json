@@ -1,8 +1,10 @@
 {
   "name": "nuxt-app",
   "devDependencies": {
+    "@nuxt/image": "latest",
     "@nuxtjs/google-fonts": "latest",
     "@nuxtjs/tailwindcss": "latest",
+    "@storyblok/nuxt": "latest",
     "nuxt": "^3.9.3",
     "nuxt-swiper": "latest",
     "vue": "^3.4.14",
