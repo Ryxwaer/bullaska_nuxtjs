@@ -36,9 +36,9 @@ const showDescription = ref(true);
               disableOnInteraction: false,
               pauseOnMouseEnter: true,
             }"
-            @sliderMove="event => (showDescription = false, console.log('move'))"
-            @transitionStart="event => (showDescription = false, console.log('start'))"
-            @transitionEnd="event => (activeSlide = event.realIndex, showDescription = true, console.log('change'))"
+            @sliderMove="event => (showDescription = false)"
+            @transitionStart="event => (showDescription = false)"
+            @transitionEnd="event => (activeSlide = event.realIndex, showDescription = true)"
         >
           <SwiperSlide v-for="(slide, idx) in slides" :key="idx">
             <nuxt-img
