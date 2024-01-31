@@ -4,7 +4,7 @@
     "@nuxt/image": "latest",
     "@nuxtjs/google-fonts": "latest",
     "@nuxtjs/tailwindcss": "latest",
-    "@storyblok/nuxt": "latest",
+    "@types/jsdom": "^21.1.6",
     "nuxt": "^3.9.3",
     "nuxt-swiper": "latest",
     "vue": "^3.4.14",
@@ -20,7 +20,9 @@
   },
   "type": "module",
   "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
     "ipx": "^3.0.0",
+    "jsdom": "^24.0.0",
     "nuxt-icon": "^0.6.8"
   }
 }

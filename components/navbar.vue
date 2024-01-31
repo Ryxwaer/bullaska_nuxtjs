@@ -15,7 +15,7 @@
                 <div class="hidden sm:flex items-center space-x-3 font-work-sans-thin">
                     <nuxt-link to="/" class="py-5 px-3">About</nuxt-link>
                     <nuxt-link to="/contact" class="py-5 px-3">Contact</nuxt-link>
-                    <nuxt-link to="/blog" class="py-5 px-3">Blog</nuxt-link>
+                    <nuxt-link to="/blog" class="py-5 px-3" :class="{ 'router-link-active': isBlogActive }">Blog</nuxt-link>
                     <div class="py-5 px-3">
                         <a href="https://www.facebook.com/adriana.mikusova.37" target="_blank" rel="noopener noreferrer">
                             <Icon name="ic:baseline-facebook" size="32px" />
@@ -37,7 +37,7 @@
         <div class="flex flex-col items-center">
           <nuxt-link to="/" class="py-2 px-4 mobile">About</nuxt-link>
           <nuxt-link to="/contact" class="py-2 px-4 mobile">Contact</nuxt-link>
-          <nuxt-link to="/blog" class="py-2 px-4 mobile">Blog</nuxt-link>
+          <nuxt-link to="/blog" class="py-2 px-4 mobile" :class="{ 'router-link-active': isBlogActive }">Blog</nuxt-link>
           <a href="https://www.facebook.com/adriana.mikusova.37" target="_blank" rel="noopener noreferrer" class="block py-2 px-4">Facebook</a>
           <button class="mobile-menu-button py-2 px-4" @click="toggleMenu">
             <Icon name="material-symbols:close" size="32" />
@@ -47,22 +47,20 @@
     </nav>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      showMenu: false,
-    };
-  },
-  methods: {
-    toggleMenu() {
-      this.showMenu = !this.showMenu;
-    },
-  },
-};
+<script setup>
+const route = useRoute();
+const showMenu = ref(false);
+
+function toggleMenu() {
+  showMenu.value = !showMenu.value;
+}
+
+const isBlogActive = computed(() => {
+  return route.path.startsWith('/blog');
+});
 </script>
 
-<style>
+<style scoped>
 .router-link-active {
   position: relative;
   display: inline-block;

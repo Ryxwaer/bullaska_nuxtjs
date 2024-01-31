@@ -19,7 +19,7 @@
 <script>
 </script>
 
-<style>
+<style scoped>
 .fluid-padding {
   padding-left: clamp(0rem, 6vw - 2rem, 24rem);
   padding-right: clamp(0rem, 6vw - 2rem, 24rem);
