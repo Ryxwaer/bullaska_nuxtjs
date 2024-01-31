@@ -20,7 +20,7 @@ export default defineEventHandler( async (event) => {
             footer.remove();
         }
 
-        // remove all styles
+        /*/ remove all styles
         const styles = Array.from(dom.window.document.querySelectorAll('style'));
         for (const style of styles) {
             style.remove();
@@ -28,7 +28,7 @@ export default defineEventHandler( async (event) => {
         const lnks = Array.from(dom.window.document.querySelectorAll('link'));
         for (const lnk of lnks) {
             lnk.remove();
-        }
+        }*/
 
         // Process and update links
         const links = dom.window.document.querySelectorAll('a');
