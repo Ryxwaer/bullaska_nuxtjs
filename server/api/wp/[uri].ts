@@ -43,6 +43,7 @@ export default defineEventHandler( async (event) => {
 
         return dom.serialize();
     } catch (error: any) {
+        console.error(error);
         throw createError({
             statusCode: 500,
             statusMessage: error.message,
