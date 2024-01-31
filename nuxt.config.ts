@@ -35,13 +35,13 @@ export default defineNuxtConfig({
                 {
                     rel: 'stylesheet',
                     id: "neve-google-font-poppins-css",
-                    href: "http://fonts.googleapis.com/css?family=Poppins%3A400%2C800%2C500&amp;display=swap&amp;ver=3.8.1",
+                    href: "https://fonts.googleapis.com/css?family=Poppins%3A400%2C800%2C500&amp;display=swap&amp;ver=3.8.1",
                     media: 'all',
                 },
                 {
                     rel: 'stylesheet',
                     id: "neve-google-font-poppins-css",
-                    href: "http://fonts.googleapis.com/css?family=Poppins%3A400%2C800%2C500&amp;display=swap&amp;ver=3.8.1",
+                    href: "https://fonts.googleapis.com/css?family=Poppins%3A400%2C800%2C500&amp;display=swap&amp;ver=3.8.1",
                     media: 'all',
                 },
             ]
