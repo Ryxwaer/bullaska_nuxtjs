@@ -7,6 +7,7 @@ FROM node:${NODE_VERSION}-slim as base
 ARG PORT=3000
 
 ENV NODE_ENV=production
+ENV WP_HOST=http://wordpress:8080
 
 WORKDIR /src
 

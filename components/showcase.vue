@@ -58,7 +58,7 @@ const showDescription = ref(true);
   </div>
 </template>
 
-<style>
+<style scoped>
 .swiper-slide {
   background-size: cover;
   background-position: center;
