@@ -18,7 +18,7 @@ const showDescription = ref(true);
 <template>
   <div>
     <br />
-    <p class="font-satisfy text-2xl">Our dogs:</p>
+    <p class="font-poppins-bold text-4xl">Our dogs:</p>
     <br />
     <div class="container mx-auto">
       <div class="grid items-center lg:grid-cols-2">

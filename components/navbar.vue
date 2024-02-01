@@ -6,15 +6,15 @@
                     <!-- logo -->
                     <div>
                         <nuxt-link to="/" class="flex items-center py-5 px-2 text-black no-underline">
-                            <span class="text-6xl font-satisfy">Bullaska</span>
+                            <span class="text-6xl font-poppins-bold">Bulláska</span>
                         </nuxt-link>
                     </div>
                 </div>
 
                 <!-- primary nav -->
                 <div class="hidden sm:flex items-center space-x-3 font-work-sans-thin">
-                    <nuxt-link to="/" class="py-5 px-3">About</nuxt-link>
-                    <nuxt-link to="/contact" class="py-5 px-3">Contact</nuxt-link>
+                    <nuxt-link to="/" class="py-5 px-3">Home</nuxt-link>
+                    <nuxt-link to="/about" class="py-5 px-3">About</nuxt-link>
                     <nuxt-link to="/blog" class="py-5 px-3" :class="{ 'router-link-active': isBlogActive }">Blog</nuxt-link>
                     <div class="py-5 px-3">
                         <a href="https://www.facebook.com/adriana.mikusova.37" target="_blank" rel="noopener noreferrer">
@@ -35,8 +35,8 @@
         <!-- mobile menu -->
       <div class="mobile-menu" v-show="showMenu">
         <div class="flex flex-col items-center">
-          <nuxt-link to="/" class="py-2 px-4 mobile">About</nuxt-link>
-          <nuxt-link to="/contact" class="py-2 px-4 mobile">Contact</nuxt-link>
+          <nuxt-link to="/" class="py-2 px-4 mobile">Home</nuxt-link>
+          <nuxt-link to="/about" class="py-2 px-4 mobile">About</nuxt-link>
           <nuxt-link to="/blog" class="py-2 px-4 mobile" :class="{ 'router-link-active': isBlogActive }">Blog</nuxt-link>
           <a href="https://www.facebook.com/adriana.mikusova.37" target="_blank" rel="noopener noreferrer" class="block py-2 px-4">Facebook</a>
           <button class="mobile-menu-button py-2 px-4" @click="toggleMenu">
