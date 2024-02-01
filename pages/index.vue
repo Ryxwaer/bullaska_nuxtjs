@@ -1,4 +1,7 @@
 <template>
+
+  <hero />
+
   <div class="font-work-sans text-xl fluid-padding">
     <!--
     <div class="flex justify-center">
