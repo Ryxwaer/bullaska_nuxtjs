@@ -10,6 +10,7 @@ module.exports = {
         'poppins': ['Poppins', 'sans-serif'],
       },
       fontWeight: {
+        'poppins-black': '900',
         'poppins-extrabold': '800',
         'poppins-bold': '700',
         'poppins-thin': '400',
