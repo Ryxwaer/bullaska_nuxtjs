@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div class="relative parallaxContainer h-[600px] items-center justify-center flex-col text-center">
+    <div class="relative parallaxContainer sm:h-[600px] h-[500px] items-center justify-center flex-col text-center">
       <div class="absolute flex flex-col justify-end items-center w-full h-full fci">
         <h1 class="text-white font-poppins-bold text-4xl sm:text-6xl bg-black w-[60%] min-h-[80px]">French Bulldog</h1>
         <NuxtImg src="/images/home/fci.png" sizes="102px" />
       </div>
-      <div class="absolute w-full h-full bg-no-repeat sm:bg-center sm:bg-contain" :style="backgroundStyle"></div>
+      <div class="absolute w-full h-full bg-no-repeat sm:bg-center bg-140% sm:bg-contain" :style="backgroundStyle"></div>
       <div class="bg-white text-center w-full mb-[182px]" >
         <div class="font-poppins-black sm:text-7xl text-5xl text-white" style="mix-blend-mode: difference;">
           <h1>Welcome to our kennel</h1>
