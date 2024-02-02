@@ -8,6 +8,7 @@ ARG PORT=3000
 
 ENV NODE_ENV=production
 ENV WP_HOST=http://wordpress:80
+ENV WP_PUB_ADDRESS=https://wp.ryxwaer.com
 
 WORKDIR /src
 

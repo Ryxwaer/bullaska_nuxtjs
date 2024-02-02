@@ -25,6 +25,8 @@ export default defineEventHandler( async (event) => {
         for (const style of styles) {
             style.remove();
         }
+
+        // remove linked stylesheets
         const lnks = Array.from(dom.window.document.querySelectorAll('link'));
         for (const lnk of lnks) {
             lnk.remove();
