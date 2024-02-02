@@ -3,7 +3,7 @@
     <div class="relative parallaxContainer sm:h-[600px] h-[500px] items-center justify-center flex-col text-center">
       <div class="absolute flex flex-col justify-end items-center w-full h-full fci">
         <h1 class="text-white font-poppins-bold text-4xl sm:text-6xl bg-black w-[60%] min-h-[80px]">French Bulldog</h1>
-        <NuxtImg src="/images/home/fci.png" sizes="102px" />
+        <img sizes="102px" src="https://upload.wikimedia.org/wikipedia/commons/6/60/FCI_logo.svg" alt="FCI" style="width: 102px; filter: grayscale(1);" />
       </div>
       <div class="hidden md:block absolute w-full h-full bg-no-repeat sm:bg-center bg-140% sm:bg-contain" :style="backgroundStyle"></div>
       <div class="md:hidden absolute w-full h-full bg-no-repeat sm:bg-center bg-140% sm:bg-contain" :style="backgroundStyleMobile"></div>

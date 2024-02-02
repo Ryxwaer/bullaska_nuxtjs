@@ -26,7 +26,7 @@
               @transitionEnd="event => (activeSlide = event.realIndex, showDescription = true)"
           >
             <SwiperSlide v-for="(dog, idx) in dogs" :key="idx">
-              <nuxt-img format="webp" loading="lazy"
+              <NuxtImg format="webp"
                   :src="dog.featuredMedia"
                   :alt="`Slide ${idx + 1}`" />
             </SwiperSlide>
