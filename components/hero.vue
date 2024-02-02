@@ -1,78 +1,54 @@
 <template>
-  <div class="container">
-    <NuxtImg src="/images/home/fci.png" sizes="102px" style="margin-bottom: 0" class="fci" />
-    <div class="bg-black text-center sub">
-      <div class="font-poppins-bold text-6xl text-white">
-        <h1>French bulldog</h1>
+  <div>
+    <div class="relative parallaxContainer h-[600px] items-center justify-center flex-col text-center">
+      <div class="absolute flex flex-col justify-end items-center w-full h-full fci">
+        <h1 class="text-white font-poppins-bold text-4xl sm:text-6xl bg-black w-[60%] min-h-[80px]">French Bulldog</h1>
+        <NuxtImg src="/images/home/fci.png" sizes="102px" />
       </div>
-    </div>
-    <div
-        ref="parallaxContainer"
-        class="bg-fixed bg-center h-[560px] overflow-hidden bg-no-repeat justify-center items-center parallax"
-        :style="{ backgroundImage: `url('/images/home/eyes.jpeg')`, backgroundPositionY: `54px` }"
-    >
-    </div>
-    <div class="bg-white text-center heading">
-      <div class="font-poppins-black text-7xl text-white" style="mix-blend-mode: difference;">
-        <h1>Welcome to our kennel</h1>
+      <div class="absolute w-full h-full bg-no-repeat sm:bg-center sm:bg-contain" :style="backgroundStyle"></div>
+      <div class="bg-white text-center w-full mb-[182px]" >
+        <div class="font-poppins-black sm:text-7xl text-5xl text-white" style="mix-blend-mode: difference;">
+          <h1>Welcome to our kennel</h1>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
-<script setup>
-import {ref, onMounted, onUnmounted} from 'vue';
-
-const parallaxContainer = ref(null);
-
-const handleScroll = () => {
-  const scrollSpeedFactor = 0.45;
-  const offset = window.pageYOffset * scrollSpeedFactor - 54;
-  parallaxContainer.value.style.backgroundPositionY = `${-offset}px`;
-};
-
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll);
-});
-
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll);
-});
-</script>
-
 <style scoped>
-.container {
+.parallaxContainer {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  height: auto;
-  min-height: 560px;
   position: relative;
 }
-
-.parallax {
-  width: 98%;
-  height: 560px;
-  position: absolute;
-  transition: transform 0.2s ease-out;
-}
-
-.heading {
-  width: 93.9%;
-  margin-bottom: 200px;
-}
-
-.sub {
-  width: 60%;
-  min-height: 80px;
-  position: absolute;
-  margin-bottom: 112px;
-}
-
-.fci {
-  position: absolute;
-  margin-bottom: 0px;
-  margin-left: 10px;
-}
 </style>
+
+<script setup>
+// Background position state
+const yOffset = ref(120);
+const yPos = ref(0 - yOffset.value);
+
+// Compute background style reactive property
+const backgroundStyle = computed(() => ({
+  backgroundImage: `url('/images/home/eyes.jpeg')`,
+  backgroundPosition: `center ${yPos.value}px`
+}));
+
+// Method to update background position based on scroll
+const updateBackgroundPosition = () => {
+  const speed = 0.48;
+  yPos.value = window.scrollY * speed - yOffset.value;
+};
+
+// Listen to scroll event on mount
+onMounted(() => {
+  window.addEventListener('scroll', updateBackgroundPosition);
+});
+
+// Cleanup event listener on component unmount
+onUnmounted(() => {
+  window.removeEventListener('scroll', updateBackgroundPosition);
+});
+</script>
