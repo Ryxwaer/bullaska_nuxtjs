@@ -18,7 +18,7 @@ export default defineEventHandler(async () => {
                 featuredMedia: featuredMedia,
             });
         }
-        console.log(jsonData);
+
         return jsonData;
 
     } catch (error: any) {
