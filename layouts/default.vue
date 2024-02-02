@@ -7,6 +7,7 @@
         <slot />
       </div>
     </div>
+    <div class="footer h-32" />
   </div>
 </template>
 

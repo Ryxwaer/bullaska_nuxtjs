@@ -2,7 +2,7 @@
 
   <hero />
 
-  <div class="font-work-sans text-xl fluid-padding">
+  <div class="font-poppins fluid-padding">
     <!--
     <div class="flex justify-center">
       <p class="font-satisfy text-6xl text-amber-100">Welcome to our kennel</p>
@@ -10,6 +10,11 @@
     -->
 
     <loreipsum />
+
+    <div class="h-12" />
+    <div class="text-4xl font-poppins-bold">
+      Naše bulldočky:
+    </div>
 
     <showcase />
 

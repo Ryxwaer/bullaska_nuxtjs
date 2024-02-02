@@ -1,7 +1,5 @@
 <script setup>
-import { useFetch } from 'nuxt/app';
-
-const { data: postData, pending, error } = await useFetch(`/api/wp/blog-2`);
+const { data: postData, pending, error } = await useFetch(`/api/wp/rendered/blog-2`);
 </script>
 
 <template>
