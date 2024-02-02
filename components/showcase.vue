@@ -2,9 +2,9 @@
     <div class="container mx-auto">
       <div class="grid items-center lg:grid-cols-2">
         <transition name="fade">
-          <div :class="{ 'opacity-0': !showDescription }" class="transition-opacity duration-500 ease-in-out">
-            <div class="text-4xl text-center h-16">
-              <h1 v-html="dogs[activeSlide].title" />
+          <div :class="{ 'opacity-0': !showDescription }" class="transition-opacity duration-500 ease-in-out min-h-[260px]">
+            <div class="flex items-center justify-center h-16">
+              <h1 v-html="dogs[activeSlide].title" class="text-4xl text-center" />
             </div>
             <p v-html="dogs[activeSlide].excerpt" />
           </div>
