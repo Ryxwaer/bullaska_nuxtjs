@@ -15,9 +15,7 @@ export default defineNuxtConfig({
     tailwindcss: {
         cssPath: '~/assets/css/input.css'
     },
-    routeRules: {
-        '/': {prerender: true},
-    }, app: {
+    app: {
         head: {
             link: [
                 {

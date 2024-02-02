@@ -1,4 +1,4 @@
-export default defineEventHandler(async (event) => {
+export default defineEventHandler(async () => {
 
     try {
         const posts: any = await $fetch(`${process.env.WP_HOST}/wp-json/wp/v2/posts?tags=10&_fields=slug,excerpt,_links,title`);
