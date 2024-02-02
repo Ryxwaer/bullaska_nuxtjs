@@ -17,6 +17,12 @@ module.exports = {
         'work-sans-bold': '700',
         'work-sans-thin': '400',
       },
+      backgroundSize: {
+        'auto': 'auto',
+        'cover': 'cover',
+        'contain': 'contain',
+        '140%': '140%',
+      }
     },
   },
 }
