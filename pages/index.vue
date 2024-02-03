@@ -13,7 +13,7 @@
 
     <div class="h-12" />
     <div class="text-4xl font-poppins-bold">
-      Naše bulldočky:
+      Naše psy:
     </div>
 
     <showcase />

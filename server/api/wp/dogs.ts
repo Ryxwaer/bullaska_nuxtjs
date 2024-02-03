@@ -13,7 +13,7 @@ export default defineEventHandler(async () => {
             }
             jsonData.push({
                 slug: post.slug,
-                title: post.title.rendered,
+                title: post.title.rendered.replaceAll('/', '<br />'),
                 excerpt: post.excerpt.rendered.replaceAll(`${process.env.WP_PUB_ADDRESS}`, `/blog`),
                 featuredMedia: featuredMedia,
             });
