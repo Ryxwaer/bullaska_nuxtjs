@@ -3,17 +3,19 @@
   <hero />
 
   <div class="font-poppins fluid-padding">
-    <!--
-    <div class="flex justify-center">
-      <p class="font-satisfy text-6xl text-amber-100">Welcome to our kennel</p>
-    </div>
-    -->
 
-    <loreipsum />
+    <div class="py-24 h-80" >
+      <div class="text-4xl font-poppins-bold">
+        O nás
+      </div>
+      <excerpt :slug="`about`" />
+    </div>
+
+    <div class="h-12" />
 
     <div class="h-12" />
     <div class="text-4xl font-poppins-bold">
-      Naše psy:
+      Naše psy
     </div>
 
     <showcase />
@@ -25,6 +27,12 @@
 </template>
 
 <script>
+import {defineComponent} from "vue";
+import Excerpt from "../components/excerpt.vue";
+
+export default defineComponent({
+  components: {Excerpt}
+})
 </script>
 
 <style scoped>

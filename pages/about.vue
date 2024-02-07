@@ -4,9 +4,7 @@ definePageMeta({
   layout: "blog",
 });
 
-const route = useRoute();
-
-const { data: postData, pending, error } = await useFetch(`/api/wp/rendered/about`);
+const { data: postData, pending, error } = await useFetch(`/api/wp/rendered/about-s`);
 </script>
 
 <template>

@@ -10,6 +10,7 @@
       <transition name="fade">
         <div class="flex flex-col justify-between min-h-[260px] transition-opacity duration-500 ease-in-out py-4 overflow-hidden"
              :class="{ 'opacity-0': !showDescription }">
+          <!-- Extract to component -->
           <div>
             <div v-html="dogs[activeSlide].title" class="text-4xl min-h-[88px]" @mouseenter="pauseSwiperAutoplay"
                  @mouseleave="startSwiperAutoplay"/>
@@ -53,9 +54,8 @@
 </template>
 
 <script setup>
-const {data: dogs, pending, error} = await useFetch(`/api/wp/dogs`);
+const {data: dogs, pending, error} = await useFetch(`/api/wp/tag/dog`);
 
-const width = ref(380);
 const activeSlide = ref(0);
 const showDescription = ref(true);
 
