@@ -4,7 +4,7 @@
 
   <div class="font-poppins fluid-padding">
 
-    <div class="py-24 min-h-80" >
+    <div class="py-24" >
       <div class="text-4xl font-poppins-bold">
         O nás
       </div>
@@ -12,9 +12,6 @@
       <excerpt :slug="`about`" />
     </div>
 
-    <div class="h-12" />
-
-    <div class="h-12" />
     <div class="text-4xl font-poppins-bold">
       Naše psy
     </div>
