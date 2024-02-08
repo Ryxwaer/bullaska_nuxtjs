@@ -4,10 +4,11 @@
 
   <div class="font-poppins fluid-padding">
 
-    <div class="py-24 h-80" >
+    <div class="py-24 min-h-80" >
       <div class="text-4xl font-poppins-bold">
         O nás
       </div>
+      <br />
       <excerpt :slug="`about`" />
     </div>
 
