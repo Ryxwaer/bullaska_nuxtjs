@@ -20,6 +20,7 @@
     </div>
 
     <showcase />
+    <br />
 
     <page-text :slug="`why`" />
 
