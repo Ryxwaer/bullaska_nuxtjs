@@ -4,7 +4,7 @@ export default defineEventHandler( async (event) => {
     try {
         const posts: any = await $fetch(`${process.env.WP_HOST}/wp-json/wp/v2/posts?slug=${uri}&_fields=slug,excerpt,_links,title`);
         const post = posts[0];
-        console.log(post);
+
         const media = post._links['wp:featuredmedia'] ? post._links['wp:featuredmedia'][0].href : null;
         let featuredMedia: string = '/nuxt.png';
         if (media) {
@@ -20,8 +20,6 @@ export default defineEventHandler( async (event) => {
             excerpt: excerptWithoutA,
             featuredMedia: featuredMedia,
         };
-
-        console.log(jsonData);
 
         return jsonData;
 

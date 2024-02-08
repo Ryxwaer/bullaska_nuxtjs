@@ -1,5 +1,5 @@
 <template>
-  <div class="font-work-sans">
+  <div class="font-work-sans scroll-smooth">
     <navbar/>
     <br/>
     <slot/>

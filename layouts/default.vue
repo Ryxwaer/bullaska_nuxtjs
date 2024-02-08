@@ -1,5 +1,5 @@
 <template>
-  <div class="font-poppins">
+  <div class="font-poppins scroll-smooth">
     <navbar />
     <div class="flex justify-center items-center min-h-screen bg-brown">
       <div class="w-full max-w-6xl p-4 shadow-lg rounded-lg">

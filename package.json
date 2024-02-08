@@ -1,6 +1,7 @@
 {
   "name": "nuxt-app",
   "devDependencies": {
+    "@formkit/auto-animate": "latest",
     "@nuxt/image": "latest",
     "@nuxtjs/google-fonts": "latest",
     "@nuxtjs/tailwindcss": "latest",

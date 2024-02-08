@@ -1,6 +1,6 @@
 <template>
     <nav class="bg-brown text-2xl">
-      <div class="max-w mx-auto fluid-padding-x fluid-padding-y">
+      <div class="max-w mx-auto fluid-padding-x fluid-padding-y" ref="parent">
             <div class="flex justify-between">
                 <div class="flex space-x-4">
                     <!-- logo -->
@@ -50,6 +50,8 @@
 <script setup>
 const route = useRoute();
 const showMenu = ref(false);
+
+const [parent] = useAutoAnimate()
 
 function toggleMenu() {
   showMenu.value = !showMenu.value;
