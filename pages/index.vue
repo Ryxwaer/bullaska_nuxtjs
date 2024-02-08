@@ -21,7 +21,7 @@
 
     <showcase />
 
-    <loreipsum />
+    <page-text :slug="`why`" />
 
     <lazy-contacts />
   </div>
@@ -30,9 +30,10 @@
 <script>
 import {defineComponent} from "vue";
 import Excerpt from "../components/excerpt.vue";
+import PageText from "~/components/pageText.vue";
 
 export default defineComponent({
-  components: {Excerpt}
+  components: {PageText, Excerpt}
 })
 </script>
 
