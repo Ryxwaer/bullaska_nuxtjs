@@ -7,9 +7,6 @@
       Error loading data for uri "{{ uri }}"
     </div>
     <div v-else v-html="postData" class="w-full"/>
-    <div class="w-full">
-      <pedigree index="1"/>
-    </div>
   </div>
 </template>
 

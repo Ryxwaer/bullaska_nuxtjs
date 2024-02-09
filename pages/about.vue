@@ -4,7 +4,10 @@ definePageMeta({
   layout: "blog",
 });
 
-const { data: postData, pending, error } = await useFetch(`/api/wp/rendered/about-s`);
+const route = useRoute();
+const uri = route.params.uri;
+
+const {data: postData, pending, error} = await useFetch(`/api/wp/rendered/about`);
 </script>
 
 <template>
@@ -13,8 +16,9 @@ const { data: postData, pending, error } = await useFetch(`/api/wp/rendered/abou
       Loading...
     </div>
     <div v-else-if="error" class="text-2xl text-center">
-      Error loading data for About
+      Error loading data for uri About
     </div>
     <div v-else v-html="postData" class="w-full"/>
   </div>
 </template>
+
