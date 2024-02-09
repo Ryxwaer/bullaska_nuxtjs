@@ -1,11 +1,15 @@
 version: '3.8'
 
 services:
-  bullaska:
+  nuxtapp:
     container_name: bullaska
     build:
       context: .
-    image: bullaska:1.0
+      dockerfile: Dockerfile
+
+    image: bullaska:1.0.0
+
+    restart: unless-stopped
     networks:
       - nginx-proxy-manager_default
 
