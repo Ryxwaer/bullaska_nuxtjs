@@ -1,75 +1,109 @@
 <template>
-  <div v-if="pending" class="text-2xl text-center">
-    Loading data...
-  </div>
-  <div v-else-if="error" class="text-2xl text-center text-red-500">
-    Error loading data
-  </div>
-  <div v-else>
-    <!-- Modal Background and Flex Container -->
-    <div v-if="showModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full flex items-center justify-center" @click.self="showModal = false">
-      <!-- Modal -->
-      <div class="p-5 border w-auto shadow-lg rounded-md bg-white">
-        <div class="text-3xl font-bold text-center mb-4">{{ data.name }}</div>
-        <div class="text-center mb-4">
-          <img :src="data.imageSrc" alt="Pet Image" class="inline-block max-h-60">
-        </div>
-        <div>
-          <table class="table-auto w-full mb-4">
-            <tbody>
-            <tr class="bg-amber-200">
-              <th class="px-4 py-2 text-left">Breed</th>
-              <td class="border px-4 py-2">{{ data.breed }}</td>
-            </tr>
-            <tr>
-              <th class="px-4 py-2 text-left">Gender</th>
-              <td class="border px-4 py-2">{{ data.gen }}</td>
-            </tr>
-            <tr class="bg-amber-200">
-              <th class="px-4 py-2 text-left">Birth Date</th>
-              <td class="border px-4 py-2">{{ data.birth }}</td>
-            </tr>
-            <tr>
-              <th class="px-4 py-2 text-left">Birth Country</th>
-              <td class="border px-4 py-2">{{ data.country }}</td>
-            </tr>
-            <tr class="bg-amber-200">
-              <th class="px-4 py-2 text-left">Color</th>
-              <td class="border px-4 py-2">{{ data.color }}</td>
-            </tr>
-            </tbody>
-          </table>
-          <NuxtLink :to="data.link" class="inline-block hover:text-black hover:bg-amber-200 text-gray-800 py-2 px-4 border border-black rounded shadow">
-            View more information >>
-          </NuxtLink>
-        </div>
-        <!-- Close Modal Button -->
-        <div class="text-right mt-2">
-          <button class="px-4 py-2 bg-red-500 text-white hover:bg-red-700 rounded" @click="showModal = false">Close</button>
-        </div>
+  <div class="flex gap-2 md:gap-12 columns-3 bg-amber-600 bg-opacity-20 rounded-3xl h-[800px]">
+    <div class="flex flex-col gap-12 h-[80%] w-1/3 my-auto">
+      <div v-for="parent in data2.parents" :key="parent"
+           class="flex flex-1 flex-col justify-center bg-amber-500 rounded-3xl text-center hover:scale-x-125 hover:scale-y-125 transition duration-300 p-4 border">
+        <div class="mt-2">{{ parent }}</div>
+      </div>
+    </div>
+    <div class="flex flex-col gap-4 h-full w-1/3">
+      <div v-for="parent in data2.grandparents" :key="parent"
+           class="flex flex-1 flex-col justify-center bg-amber-600 rounded-3xl text-center hover:scale-x-125 hover:scale-y-125 transition duration-300 p-4 border">
+        <div class="mt-2">{{ parent }}</div>
+      </div>
+    </div>
+    <div class="flex flex-col gap-2 h-full w-1/3">
+      <div v-for="parent in data2.greatGrandparents" :key="parent"
+           class="flex flex-1 flex-col justify-center bg-amber-800 rounded-3xl text-center hover:scale-x-125 hover:scale-y-125 transition duration-300 p-4 border">
+        <div class="mt-2">{{ parent }}</div>
       </div>
     </div>
   </div>
 </template>
 
-<script setup>
-const props = defineProps({
-  index: Number
-});
+<script setup lang="ts">
+const data2 = {
+  parents: ["mother", "father"],
+  grandparents: ["grandmother1", "grandfather1", "grandmother2", "grandfather2"],
+  greatGrandparents: ["greatGrandmother1", "greatGrandfather1", "greatGrandmother2", "greatGrandfather2", "greatGrandmother3", "greatGrandfather3", "greatGrandmother4", "greatGrandfather4"],
+};
 
-const showModal = ref(true);
-
-const {data, pending, error} = await useFetch(`/api/pedigree/${props.index}`);
+const data1 = [
+  {
+    name: "Mother",
+    image: "/images/home/eyes.jpeg",
+    parent: [
+      {
+        name: "Test11",
+        image: "/images/home/eyes.jpeg",
+        parent: [
+          {
+            name: "Test21",
+            image: "/images/home/eyes.jpeg",
+            parent: [],
+          },
+          {
+            name: "Test22",
+            image: "/images/home/eyes.jpeg",
+            parent: [],
+          }
+        ],
+      },
+      {
+        name: "Test12",
+        image: "/images/home/eyes.jpeg",
+        parent: [
+          {
+            name: "Test23",
+            image: "/images/home/eyes.jpeg",
+            parent: [],
+          },
+          {
+            name: "Test24",
+            image: "/images/home/eyes.jpeg",
+            parent: [],
+          }
+        ],
+      }
+    ],
+  },
+  {
+    name: "Father",
+    image: "/images/home/eyes.jpeg",
+    parent: [
+      {
+        name: "Test13",
+        image: "/images/home/eyes.jpeg",
+        parent: [
+          {
+            name: "Test25",
+            image: "/images/home/eyes.jpeg",
+            parent: [],
+          },
+          {
+            name: "Test26",
+            image: "/images/home/eyes.jpeg",
+            parent: [],
+          }
+        ],
+      },
+      {
+        name: "Test14",
+        image: "/images/home/eyes.jpeg",
+        parent: [
+          {
+            name: "Test27",
+            image: "/images/home/eyes.jpeg",
+            parent: [],
+          },
+          {
+            name: "Test28",
+            image: "/images/home/eyes.jpeg",
+            parent: [],
+          }
+        ],
+      }
+    ],
+  },
+];
 </script>
-
-<style scoped>
-table th {
-  text-align: left;
-  background-color: #fde68a;
-}
-
-table td, table th {
-  border: 1px solid #d1d5db;
-  padding: 8px;
-}
-</style>
