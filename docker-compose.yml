@@ -5,6 +5,7 @@ services:
     container_name: bullaska
     build:
       context: .
+    image: bullaska:1.0
     networks:
       - nginx-proxy-manager_default
 
