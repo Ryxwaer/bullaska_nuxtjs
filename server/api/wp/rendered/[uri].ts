@@ -4,7 +4,7 @@ export default defineEventHandler( async (event) => {
     const uri = getRouterParam(event, 'uri');
 
     try {
-        const pageData: string = await $fetch(`${process.env.WP_HOST}/${uri}`);
+        const pageData: any = await $fetch(`${process.env.WP_HOST}/${uri}`);
 
         const dom = new JSDOM(pageData);
 

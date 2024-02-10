@@ -9,6 +9,7 @@ ARG PORT=3000
 ENV NODE_ENV=production
 ENV WP_HOST=http://wordpress:80
 ENV WP_PUB_ADDRESS=https://wp.ryxwaer.com
+ENV DB_URI=mongodb://admin:VTttAiXTjAWxy6XK@mongodb:27017/bullaska?authSource=admin
 
 WORKDIR /src
 

@@ -2,8 +2,15 @@
 
 export default defineNuxtConfig({
     devtools: {enabled: true},
-
-    modules: ["@nuxtjs/tailwindcss", 'nuxt-icon', 'nuxt-swiper', '@nuxt/image', '@formkit/auto-animate'],
+    typescript: {
+        typeCheck: true
+    },
+    modules: ["@nuxtjs/tailwindcss", 'nuxt-icon', 'nuxt-swiper', '@nuxt/image', '@formkit/auto-animate', 'nuxt-mongoose'],
+    mongoose: {
+        uri: process.env.DB_URI,
+        options: {},
+        modelsDir: 'models',
+    },
     css: [
         '@/assets/css/globals.css',
     ],
