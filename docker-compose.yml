@@ -4,7 +4,7 @@ services:
   bullaska:
     container_name: bullaska
     build: .
-    image: bullaska:1.0
+    image: bullaska:1.1
     networks:
       - nginx-proxy-manager_default
 
