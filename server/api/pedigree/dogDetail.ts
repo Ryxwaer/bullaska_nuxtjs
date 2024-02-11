@@ -14,11 +14,7 @@ export default defineEventHandler(async (event) => {
     }
 
     // find dog in db by id
-    const dog = await PedigreeDog.findOne({ id: query.id });
-
-    if (dog) {
-        return dog;
-    }
+    const dog_db = await PedigreeDog.findOne({ id: query.id });
 
     try {
         const htmlContent: any = await $fetch(`https://pedigreedex.com/pedigree/pedigree/preview?pedigree=${query.id}`, {
@@ -59,10 +55,11 @@ export default defineEventHandler(async (event) => {
             link,
         };
 
-        console.log('jsonData', jsonData);
-
-        await PedigreeDog.create(jsonData);
-
+        if (dog_db) {
+            await dog_db.updateOne(jsonData);
+        } else {
+            await PedigreeDog.create(jsonData);
+        }
         return jsonData;
 
     } catch (error: any) {

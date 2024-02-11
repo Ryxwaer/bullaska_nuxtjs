@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="1120"
+   height="848"
+   viewBox="0 0 1120 848"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <linearGradient
+       id="swatch27">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop28" />
+    </linearGradient>
+  </defs>
+  <g
+     id="layer1">
+    <path
+       style="opacity:0.2;fill:none;fill-opacity:1;stroke:#000000;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 928.63649,63.867709 c -154.55985,1.277354 -215.87285,57.480941 -371.71006,57.480941 -155.83721,0 -206.93138,112.40717 -365.3233,113.68452 162.22398,0 215.87286,90.69215 370.43272,91.9695 154.55985,1.27736 205.65402,43.43004 365.32329,43.43004"
+       id="path18" />
+    <path
+       style="opacity:0.2;fill:none;stroke:#000000;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 559.48113,132.84484 c 146.89573,2.5547 210.76344,31.93385 369.15536,33.2112"
+       id="path19" />
+    <path
+       style="opacity:0.2;fill:none;stroke:#000000;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 558.20378,315.50648 c 152.00514,1.27735 209.48609,-51.09416 367.878,-48.53946"
+       id="path20" />
+    <path
+       style="opacity:0.2;fill:none;stroke:#000000;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 935.54311,469.11456 c -154.5598,1.27735 -224.81428,33.21121 -380.65148,33.21121 -155.8372,0 -208.20875,84.30538 -366.60069,85.58273 162.22394,0 213.31813,126.45807 367.87803,127.73542 154.5598,1.27736 220.98225,70.25447 380.65155,70.25447"
+       id="path18-3" />
+    <path
+       style="opacity:0.2;fill:none;stroke:#000000;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 553.61427,524.04079 c 146.8957,2.5547 224.81429,56.20358 383.20619,57.48093"
+       id="path19-5" />
+    <path
+       style="opacity:0.2;fill:none;stroke:#000000;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 549.78215,693.92889 c 152.0052,1.27735 227.36907,-22.99237 385.76097,-20.43767"
+       id="path20-6" />
+  </g>
+</svg>
