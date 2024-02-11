@@ -74,7 +74,7 @@
               <div
                   class="relative h-[700px] rounded-lg shadow-lg dark:shadow-black/20">
                 <iframe
-                    src="https://maps.google.com/maps?q=valaska&t=k&z=13&ie=UTF8&iwloc=&output=embed"
+                    src="https://maps.google.com/maps?q=Valaská,+Slovakia&t=k&z=13&ie=UTF8&iwloc=&output=embed"
                     class="absolute left-0 top-0 h-full w-full rounded-lg"
                     allowfullscreen></iframe>
               </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="font-work-sans scroll-smooth">
+  <div class="font-poppins scroll-smooth">
     <navbar/>
     <br/>
     <slot/>

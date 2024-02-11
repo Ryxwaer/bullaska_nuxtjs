@@ -13,8 +13,8 @@
 
                 <!-- primary nav -->
                 <div class="hidden sm:flex items-center space-x-3 font-work-sans-thin">
-                    <nuxt-link to="/" class="py-5 px-3">Home</nuxt-link>
-                    <nuxt-link to="/about" class="py-5 px-3">About</nuxt-link>
+                    <nuxt-link to="/" class="py-5 px-3">Úvod</nuxt-link>
+                    <nuxt-link to="/about" class="py-5 px-3">Naše psy</nuxt-link>
                     <nuxt-link to="/blog" class="py-5 px-3" :class="{ 'router-link-active': isBlogActive }">Blog</nuxt-link>
                     <div class="py-5 px-3">
                         <a href="https://www.facebook.com/adriana.mikusova.37" target="_blank" rel="noopener noreferrer">
