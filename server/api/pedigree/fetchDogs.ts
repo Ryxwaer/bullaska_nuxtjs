@@ -5,6 +5,7 @@ interface DogData {
 }
 
 export default defineEventHandler(async (event) => {
+    const query = getQuery(event);
     const dogs = await PedigreeDog.find();
 
     const parsed = dogs.reduce((acc: DogData, dog) => {
