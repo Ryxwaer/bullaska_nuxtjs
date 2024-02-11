@@ -13,13 +13,13 @@ export default defineEventHandler( async (event) => {
         if (header) {
             header.remove();
         }
-        /*
+
         // Remove footer element
         const footer = dom.window.document.querySelector('footer');
         if (footer) {
             footer.remove();
         }
-        */
+
         /*/ remove all styles
         const styles = Array.from(dom.window.document.querySelectorAll('style'));
         for (const style of styles) {
@@ -43,7 +43,12 @@ export default defineEventHandler( async (event) => {
             link.href = `/blog/${segmented.pop()}`;
         });
 
-        return dom.serialize();
+        const serialized = dom.serialize();
+
+        // Mixed content fix
+        const mixedContentFix = serialized.replace(/http:\/\//g, 'https://');
+
+        return mixedContentFix;
     } catch (error: any) {
         console.error(error);
         throw createError({
