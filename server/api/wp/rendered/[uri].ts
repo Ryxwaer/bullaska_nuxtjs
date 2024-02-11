@@ -13,13 +13,13 @@ export default defineEventHandler( async (event) => {
         if (header) {
             header.remove();
         }
-
+        /*
         // Remove footer element
         const footer = dom.window.document.querySelector('footer');
         if (footer) {
             footer.remove();
         }
-
+        */
         /*/ remove all styles
         const styles = Array.from(dom.window.document.querySelectorAll('style'));
         for (const style of styles) {
