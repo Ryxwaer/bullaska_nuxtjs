@@ -48,5 +48,5 @@ export const PedigreeDog = defineMongooseModel('PedigreeDog', {
         type: String,
         required: true,
         nullable: true,
-    }
+    },
 });
