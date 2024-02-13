@@ -5,7 +5,7 @@
   <div v-else-if="error">
     Error fetching dogs.
   </div>
-  <div v-else class="overflow-x-auto bg-[url('/pedigree_bg.svg')] bg-no-repeat bg-center bg-cover rounded-2xl px-10 py-6 scrollbar-hide" :class="gridClass"
+  <div id="pedigree" v-else class="overflow-x-auto bg-[url('/pedigree_bg.svg')] bg-no-repeat bg-center bg-cover rounded-2xl px-10 py-6 scrollbar-hide" :class="gridClass"
        @mouseenter="hovered = 1" @mouseleave="hovered = 0">
     <div class="flex gap-2 md:gap-12 min-w-[800px] h-[800px] z-10">
       <div class="flex flex-col gap-16 h-[80%] w-1/3 my-auto">
