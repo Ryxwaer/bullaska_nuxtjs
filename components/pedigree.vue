@@ -57,7 +57,7 @@
   </div>
   -->
   <div>
-    <pedigree-modal :data="currentDog" :showModal="showModal" />
+    <lazy-pedigree-modal :data="currentDog" :showModal="showModal" />
   </div>
 </template>
 
@@ -67,9 +67,10 @@ const config = defineProps({
   grandparents: Array,
   greatGrandparents: Array,
 });
-const { data: dogs, pending, error } = await useFetch(`/api/pedigree/fetchDogs`);
-
-//fetchMissingDogDetails();
+const { data: dogs, pending, error } = await useLazyFetch(`/api/pedigree/fetchDogs`);
+watch(dogs, (newData) => {
+  fetchMissingDogDetails();
+})
 
 function delay(time) {
   return new Promise(resolve => setTimeout(resolve, time));
@@ -91,8 +92,6 @@ async function fetchMissingDogDetails() {
     }
   }
 }
-
-const { data: newlyFetched } = await useFetch(`/api/pedigree/dogDetail`, { query: { id: 273252 } });
 
 const hovered = ref(0);
 const gridClass = computed(() => hovered.value ? 'gap-1' : '');
