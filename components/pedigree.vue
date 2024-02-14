@@ -127,6 +127,6 @@ function handleClick(event, parent) {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center 30%;
 }
 </style>
