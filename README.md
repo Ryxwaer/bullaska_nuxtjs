@@ -1,75 +1,25 @@
-# Nuxt 3 Minimal Starter
+# Nuxt 3 App for Our French Bulldog Kennel
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Welcome to our French Bulldog kennel's website, built with Nuxt 3 to showcase our lovely dogs and provide all the information you need about the kennel.
 
-## Setup
+**Live Website:** [https://bullaska.ryxwaer.com/](https://bullaska.ryxwaer.com/)
 
-Make sure to install the dependencies:
+## Technology Used
+- **CMS:** Wordpress
+- **Database:** MongoDB
+- **Styles:** Tailwind CSS
 
-```bash
-# npm
-npm install
+## Prerequisites
+- [Bun](https://bun.sh/) for running local development server
+- [Docker](https://www.docker.com/) for deployment on the server
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+## Run Locally
+Ensure you have Bun installed on your machine. Then, execute the following commands to start the development server:
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+bun install  # Install dependencies
+bun run dev -o  # Run the development server and open in browser
 ```
 
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Deployment
+The project is configured for deployment using Docker. For deployment instructions, please refer to the `docker-compose.yml` file or our deployment guide (link to deployment guide if available).
