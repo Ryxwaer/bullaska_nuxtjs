@@ -6,9 +6,7 @@ services:
     build:
       context: .
       args:
-        - DB_URI_ARG=${DB_URI_ENV}
-    environment:
-      - DB_URI_ENV=${DB_URI}
+        - DB_URI=${DB_URI}
     pull_policy: build
     image: bullaska:latest
     networks:
