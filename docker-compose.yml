@@ -5,7 +5,7 @@ services:
     container_name: bullaska
     build:
       context: .
-    pull_policy: always
+    pull_policy: build
     image: bullaska:latest
     networks:
       - nginx-proxy-manager_default
