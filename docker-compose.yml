@@ -3,7 +3,9 @@ version: '3.8'
 services:
   bullaska:
     container_name: bullaska
-    build: .
+    build:
+      context: .
+    pull_policy: always
     image: bullaska:latest
     networks:
       - nginx-proxy-manager_default
