@@ -22,4 +22,4 @@ bun run dev -o  # Run the development server and open in browser
 ```
 
 ## Deployment
-The project is configured for deployment using Docker. For deployment instructions, please refer to the `docker-compose.yml` file or our deployment guide (link to deployment guide if available).
+The project is configured for deployment using Docker. For deployment instructions, please refer to the `docker-compose.yml` file.
