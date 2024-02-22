@@ -35,12 +35,14 @@ export default defineEventHandler( async (event) => {
         // Process and update links
         const links = dom.window.document.querySelectorAll('a');
         links.forEach(link => {
-            const url = new URL(link.href);
-            let segmented = url.pathname.split('/');
-            if (!segmented[-1]) {
-                segmented.pop();
+            if (!link.href.startsWith('#')) {
+                const url = new URL(link.href);
+                let segmented = url.pathname.split('/');
+                if (!segmented[-1]) {
+                    segmented.pop();
+                }
+                link.href = `/blog/${segmented.pop()}`;
             }
-            link.href = `/blog/${segmented.pop()}`;
         });
 
         const serialized = dom.serialize();
