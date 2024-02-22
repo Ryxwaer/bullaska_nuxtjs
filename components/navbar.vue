@@ -14,8 +14,8 @@
                 <!-- primary nav -->
                 <div class="hidden sm:flex items-center space-x-3 font-work-sans-thin">
                     <nuxt-link to="/" class="py-5 px-3">Úvod</nuxt-link>
-                    <nuxt-link to="/about" class="py-5 px-3">Naše psy</nuxt-link>
-                    <nuxt-link to="/blog" class="py-5 px-3" :class="{ 'router-link-active': isBlogActive }">Blog</nuxt-link>
+                    <nuxt-link to="/blog" class="py-5 px-3" :class="{ 'router-link-active': isBlogActive }">Naše psy</nuxt-link>
+                    <!-- <nuxt-link to="/blog" class="py-5 px-3" :class="{ 'router-link-active': isBlogActive }">Blog</nuxt-link> -->
                     <div class="py-5 px-3">
                         <a href="https://www.facebook.com/adriana.mikusova.37" target="_blank" rel="noopener noreferrer">
                             <Icon name="ic:baseline-facebook" size="32px" />
@@ -35,9 +35,9 @@
         <!-- mobile menu -->
       <div class="mobile-menu" v-show="showMenu">
         <div class="flex flex-col items-center">
-          <nuxt-link to="/" class="py-2 px-4 mobile" @click="toggleMenu">Home</nuxt-link>
-          <nuxt-link to="/about" class="py-2 px-4 mobile" @click="toggleMenu">About</nuxt-link>
-          <nuxt-link to="/blog" class="py-2 px-4 mobile" :class="{ 'router-link-active': isBlogActive }" @click="toggleMenu">Blog</nuxt-link>
+          <nuxt-link to="/" class="py-2 px-4 mobile" @click="toggleMenu">Úvod</nuxt-link>
+          <nuxt-link to="/blog" class="py-2 px-4 mobile" :class="{ 'router-link-active': isBlogActive }" @click="toggleMenu">About</nuxt-link>
+          <!-- <nuxt-link to="/blog" class="py-2 px-4 mobile" :class="{ 'router-link-active': isBlogActive }" @click="toggleMenu">Blog</nuxt-link> -->
           <a href="https://www.facebook.com/adriana.mikusova.37" target="_blank" rel="noopener noreferrer" class="block py-2 px-4">Facebook</a>
           <button class="mobile-menu-button py-2 px-4" @click="toggleMenu">
             <Icon name="material-symbols:close" size="32" />
