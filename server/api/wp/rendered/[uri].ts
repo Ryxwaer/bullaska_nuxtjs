@@ -35,12 +35,12 @@ export default defineEventHandler( async (event) => {
         // Process and update links
         const links = dom.window.document.querySelectorAll('a');
         links.forEach(link => {
-            if (!link.href.startsWith('#')) {
-                const url = new URL(link.href);
-                let segmented = url.pathname.split('/');
-                if (!segmented[-1]) {
-                    segmented.pop();
-                }
+            const url = new URL(link.href);
+            let segmented = url.pathname.split('/');
+            if (!segmented[-1]) {
+                segmented.pop();
+            }
+            if (segmented.length > 0) {
                 link.href = `/blog/${segmented.pop()}`;
             }
         });
@@ -53,7 +53,7 @@ export default defineEventHandler( async (event) => {
         return mixedContentFix;
     } catch (error: any) {
         console.error(error);
-        throw createError({
+        throw Error({
             statusCode: 500,
             statusMessage: error.message,
         })
