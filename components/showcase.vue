@@ -40,7 +40,7 @@
             @sliderMove="event => (showDescription = false)"
             @transitionStart="event => (showDescription = false)"
             @transitionEnd="event => (activeSlide = event.realIndex, showDescription = true)"
-            @swiper="onSwiper" @click="navigateToBlog(`/blog/dogs/${dogs[activeSlide].slug}`)"
+            @swiper="onSwiper" @click="navigateToBlog(`/blog/${dogs[activeSlide].slug}`)"
         >
           <SwiperSlide v-for="(dog, idx) in dogs" :key="idx">
             <NuxtImg format="webp"
