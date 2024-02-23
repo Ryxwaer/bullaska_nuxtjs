@@ -11,34 +11,33 @@
           <table class="table-auto w-full mb-4">
             <tbody>
             <tr>
-              <th class="px-4 py-2 text-left">Breed</th>
-              <td class="border px-4 py-2">{{ data.breed }}</td>
+              <th class="px-4 py-1 text-left">Breed</th>
+              <td class="border px-4 py-1">{{ data.breed }}</td>
             </tr>
             <tr>
-              <th class="px-4 py-2 text-left">Gender</th>
-              <td class="border px-4 py-2">{{ data.gender }}</td>
+              <th class="px-4 py-1 text-left">Gender</th>
+              <td class="border px-4 py-1">{{ data.gender }}</td>
             </tr>
             <tr>
-              <th class="px-4 py-2 text-left">Birth Date</th>
-              <td class="border px-4 py-2">{{ data.birth }}</td>
+              <th class="px-4 py-1 text-left">Birth Date</th>
+              <td class="border px-4 py-1">{{ data.birth }}</td>
             </tr>
             <tr>
-              <th class="px-4 py-2 text-left">Birth Country</th>
-              <td class="border px-4 py-2">{{ data.country }}</td>
+              <th class="px-4 py-1 text-left">Birth Country</th>
+              <td class="border px-4 py-1">{{ data.country }}</td>
             </tr>
             <tr>
-              <th class="px-4 py-2 text-left">Color</th>
-              <td class="border px-4 py-2">{{ data.color }}</td>
+              <th class="px-4 py-1 text-left">Color</th>
+              <td class="border px-4 py-1">{{ data.color }}</td>
             </tr>
             </tbody>
           </table>
-          <NuxtLink :to="data.link" class="inline-block hover:text-black hover:bg-amber-200 text-gray-800 py-2 px-4 border border-black rounded shadow">
-            View more at PedigreeDex.com >>
-          </NuxtLink>
-        </div>
-        <!-- Close Modal Button -->
-        <div class="text-right mt-2">
-          <button class="px-4 py-2 bg-red-500 text-white hover:bg-red-700 rounded" @click="showModal = false">Close</button>
+          <div class="flex justify-between items-center">
+            <NuxtLink :to="data.link" class="hover:text-black hover:bg-amber-200 text-gray-800 py-2 px-4 border border-black rounded shadow">
+              More at PedigreeDex.com >>
+            </NuxtLink>
+            <button class="bg-red-500 text-white hover:bg-red-700 py-2 px-4 border border-black rounded shadow" @click="showModal = false">Close</button>
+          </div>
         </div>
       </div>
     </div>

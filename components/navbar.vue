@@ -36,7 +36,7 @@
       <div class="mobile-menu" v-show="showMenu">
         <div class="flex flex-col items-center">
           <nuxt-link to="/" class="py-2 px-4 mobile" @click="toggleMenu">Úvod</nuxt-link>
-          <nuxt-link to="/blog" class="py-2 px-4 mobile" :class="{ 'router-link-active': isBlogActive }" @click="toggleMenu">About</nuxt-link>
+          <nuxt-link to="/blog" class="py-2 px-4 mobile" :class="{ 'router-link-active': isBlogActive }" @click="toggleMenu">Naše psy</nuxt-link>
           <!-- <nuxt-link to="/blog" class="py-2 px-4 mobile" :class="{ 'router-link-active': isBlogActive }" @click="toggleMenu">Blog</nuxt-link> -->
           <a href="https://www.facebook.com/adriana.mikusova.37" target="_blank" rel="noopener noreferrer" class="block py-2 px-4">Facebook</a>
           <button class="mobile-menu-button py-2 px-4" @click="toggleMenu">
