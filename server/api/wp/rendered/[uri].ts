@@ -53,7 +53,7 @@ export default defineEventHandler( async (event) => {
         return mixedContentFix;
     } catch (error: any) {
         console.error(error);
-        throw Error({
+        throw createError({
             statusCode: 500,
             statusMessage: error.message,
         })

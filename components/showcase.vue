@@ -17,11 +17,11 @@
             <div v-html="dogs[activeSlide].excerpt" class="text-lg"/>
           </div>
           <div class="text-right">
-            <NuxtLink :to="`/blog/${dogs[activeSlide].slug}`"
+            <a :href="`/blog/${dogs[activeSlide].slug}`"
                       class="hover:text-black hover:bg-amber-600 hover:bg-opacity-20 text-gray-800 py-2 px-4 border border-black rounded shadow"
                       @mouseenter="pauseSwiperAutoplay" @mouseleave="startSwiperAutoplay">
               Čítať viac >>
-            </NuxtLink>
+          </a>
           </div>
         </div>
       </transition>
@@ -74,7 +74,7 @@ function startSwiperAutoplay() {
 }
 
 const navigateToBlog = (route) => {
-  useRouter().push(route);
+  window.location.href = route;
 };
 </script>
 
